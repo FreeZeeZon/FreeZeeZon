@@ -64,7 +64,7 @@ body {
     width: 20px;
     height: 20px;
     background: rgba(226, 111, 255, 0.664);
-    animation: animate 25s linear infinite;
+    animation: animate 40s linear infinite;
     bottom: -250px;
     
 }
@@ -156,7 +156,7 @@ body {
     }
 
     100%{
-        transform: translateY(-1000px) rotate(720deg);
+        transform: translateY(-1500px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }
@@ -323,7 +323,7 @@ header {
     color: #ffffff;
     text-align: center;
     padding-bottom: 10px;
-    padding-top: 15px;
+    padding-top: 3px;
     text-shadow: 2px 2px 4px #000000;
     display: flex;
     flex-direction: row;
@@ -333,11 +333,12 @@ header {
 }
 
 .description {
-    font-family: 'Nunito-normal', sans-serif;
+    font-family: 'Nunito-normal';
     font-size: 20px;
     color: #ffffff;
     text-align: center;
     padding-bottom: 10px;
+    padding-top: 10px;
     text-shadow: 1px 1px 2px #000000;
     display: flex;
     flex-direction: row;
@@ -345,30 +346,11 @@ header {
     align-items: center;
     border-bottom: 1px solid #ffffff9f;
     margin-bottom: 25px;
-}
-.twitch img {
-    height: 30px; /* Фіксована висота */
-    width: auto; /* Автоматична ширина для збереження пропорцій */
-    margin: 0; /* Прибираємо зайві відступи, які можуть спричинити проблеми */
+    align-items: center;
+    border-top: 1px solid #ffffff9f;
 }
 
-.youtube img {
-    height: 50px;
-    width: auto;
-    margin: 0;
-    margin-top: 5px;
-}
 
-.telegram img,
-.discord img,
-.modrinth img {
-    height: 35px;
-    width: auto;
-    margin: 0;
-}
-
-/* ВИПРАВЛЕННЯ ДЛЯ КОНТЕЙНЕРІВ */
-/* Використовуємо Flexbox для центрування і керування відступами */
 .twitch-container,
 .youtube-container {
     /* Загальні стилі для кнопок першого ряду */
@@ -389,29 +371,6 @@ header {
     font-family: 'Nunito-bold', sans-serif;
     margin-bottom: 10px;
 
-}
-
-.twitch-container {
-    background: rgba(226, 79, 255, 0.507);
-}
-
-.youtube-container {
-    background: #ff2828;
-}
-
-.twitch-container:hover,
-.youtube-container:hover {
-    transform: scale(1.05);
-    color: #fff;
-    cursor: pointer;
-}
-
-.twitch-container:hover {
-    background-color: #b15bee;
-}
-
-.youtube-container:hover {
-    background-color: #d32424;
 }
 
 .telegram-container,
@@ -437,38 +396,6 @@ header {
     margin-top: 12px;
 }
 
-.telegram-container {
-    background: #039be5;
-}
-
-.discord-container {
-    background: #5865f2;
-}
-
-.modrinth-container {
-    background: #1cbd6a;
-}
-
-.telegram-container:hover,
-.discord-container:hover,
-.modrinth-container:hover {
-    transform: scale(1.03);
-    color: #fff;
-    cursor: pointer;
-}
-
-.telegram-container:hover {
-    background-color: #1396d8;
-}
-
-.discord-container:hover {
-    background-color: #4f5ad8;
-}
-
-.modrinth-container:hover {
-    background-color: #1aaa5f;
-}
-
 /* Скидання стилів для тексту, щоб він не мав зайвих відступів */
 .telegram_text,
 .discord_text,
@@ -486,18 +413,20 @@ header {
 
 .telegram-container .button-icon,
 .discord-container .button-icon,
-.modrinth-container .button-icon {
+.modrinth-container .button-icon,
+.monobank-container .button-icon,
+.donatello-container .button-icon {
     height: 35px;
 }
 
 /* Тепер ви можете стилізувати кожен контейнер-посилання окремо, але без повторення загальних правил */
 
 .twitch-container {
-    background: rgba(226, 79, 255, 0.507);
+    background: #8932d6
 }
 
 .twitch-container:hover {
-    background-color: #b15bee;
+    background-color: #792bbd;
     transform: scale(1.05);
 }
 
@@ -539,6 +468,19 @@ header {
 
 
 
+.button3-text {
+    font-family: 'Nunito-bold';
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
 .buttons3-container {
     display: flex; /* Змінено з flex-direction: column */
     flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
@@ -550,13 +492,15 @@ header {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    border: 5px solid #ffb900;
+    border: 5px solid #c300ff;
     border-radius: 15px 15px 15px 15px;
     -webkit-border-radius: 15px 15px 15px 15px;
     -moz-border-radius: 15px 15px 15px 15px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    filter: drop-shadow(0px 0px 30px #ffc800);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    filter: drop-shadow(0px 0px 30px #a200ff);
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -565,8 +509,8 @@ header {
 
 
 }
-.support_mono-container,
-.support_donatello-container{
+.monobank-container,
+.donatello-container{
     /* Загальні стилі для кнопок другого ряду */
     display: flex;
     flex-direction: row;
@@ -589,22 +533,22 @@ header {
 }
 
 
-.support_mono-container {
-    background: #5865f2;
+.monobank-container {
+    background: #000000;
 
 }
 
-.support_mono-container:hover {
-    background-color: #4f5ad8;
+.monobank-container:hover {
+    background-color: #161616;
     transform: scale(1.03);
 }
 
-.support_donatello-container {
-    background: #1cbd6a;
+.donatello-container {
+    background: #fc184a;
     margin-top: 12px;
 }
 
-.support_donatello-container:hover {
-    background-color: #1aaa5f;
+.donatello-container:hover {
+    background-color: #bd1237;
     transform: scale(1.03);
 }
