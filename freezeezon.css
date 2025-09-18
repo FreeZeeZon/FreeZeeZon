@@ -4,15 +4,6 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-    background: transparent;
-    border: none;
 }
 
 @font-face {
@@ -25,153 +16,123 @@
 
 body {
     background: radial-gradient(125% 125% at 50% 10%, #0f030f 20%, #2d065a 100%);
-    color: #fff;
+    color: #ffffff;
     font-family: 'Nunito-bold', sans-serif;
-    min-height: 100%;
+    /* Use min-height: 100vh for full viewport height */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Removes default body margin for perfect centering */
+    margin: 0; 
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
-
-.circles{
+.wrapper {
+    /* Use fixed for the background animation to fill the viewport */
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     overflow: hidden;
 }
 
-.circles li{
+.wrapper span {
+    border-radius: 5px;
+    top: 105%;
     position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: #9B34F1;
-    background: radial-gradient(at center, #aa43ff, #7310f5);
-    animation: animate 40s linear infinite;
-    bottom: -250px;
-    
+    box-shadow: 0 0vw 2vw 0vw #7700ffa9;
+    background: linear-gradient(45deg, #6f00ff6b, #7700ff73);
+    animation: animate-spin 20s linear infinite;
 }
 
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
+@keyframes animate-spin {
+    0% {
+        transform: translate3d(0, 0, 1px) translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 1px) translate(0, -120vh) rotate(360deg);
+    }
 }
-
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-    left: 40%;
+.wrapper span:nth-child(1) {
     width: 60px;
     height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
+    left: 5%;
+    animation-duration: 9s;
 }
 
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
+.wrapper span:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    animation-duration: 17s;
 }
 
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
+.wrapper span:nth-child(3) {
+    width: 45px;
+    height: 45px;
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: 8s;
 }
 
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
+.wrapper span:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    left: 30%;
+    animation-duration: 7s;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.wrapper span:nth-child(5) {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    animation-duration: 10s;
+}
+
+.wrapper span:nth-child(6) {
+    width: 35px;
+    height: 35px;
     left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
+    animation-duration: 6s;
 }
 
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
+.wrapper span:nth-child(7) {
+    width: 90px;
+    height: 90px;
+    left: 60%;
+    animation-duration: 12s;
+    animation-delay: 4.5s;
 }
 
-.circles li:nth-child(10){
+.wrapper span:nth-child(8) {
+    width: 55px;
+    height: 55px;
+    left: 80%;
+    animation-duration: 8s;
+}
+
+.wrapper span:nth-child(9) {
+    width: 75px;
+    height: 75px;
     left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 20s;
 }
 
-.circles li:nth-child(11){
-    left: 75%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
+.wrapper span:nth-child(10) {    
+    width: 120px;
+    height: 120px;
+    left: 95%;
+    animation-duration: 15s;
+    animation-delay: 6s;
 }
-
-.circles li:nth-child(12){
-    left: 10%;
-    width: 65px;
-    height: 65px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-
 
 @keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
+    100% {
+        transform: translate3d(0, 0, 1px) translate(0, -120vh);
     }
-
-    100%{
-        transform: translateY(-1500px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
 }
-
-
-
 
 header {
     position: fixed;
@@ -208,8 +169,8 @@ header {
     justify-content: center;
     align-items: center;
     transition: transform 0.2s ease-in;
-
 }
+
 .logo_big {
     display: flex;
     justify-content: center;
@@ -218,39 +179,34 @@ header {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-
-    
 }
 
-
-    .logo_big img:hover {
-        color: #fff;
-        transform: scale(1.05);
-        transition: transform 0.2s ease-in;
-        cursor: pointer;
-    }
-
+.logo_big img:hover {
+    color: #fff;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
 
 .buttons1-container {
     display: flex;
-    justify-content: center; /* Центруємо кнопки по горизонталі */
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100%; /* Додано, щоб контейнер займав усю ширину */
-    margin: 0; /* Видалення зайвого відступу */
+    width: 100%;
+    margin: 0;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     border-top: 1px solid #ffffff9f;
     padding-top: 25px;
-
 }
 
 .buttons2-container {
-    display: flex; /* Змінено з flex-direction: column */
-    flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
-    justify-content: center; /* Центруємо кнопки по горизонталі */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     width: 100%;
@@ -261,8 +217,6 @@ header {
     -ms-user-select: none;
     border-bottom: 1px solid #ffffff9f;
     padding-bottom: 25px;
-
-
 }
 
 .logo_text {
@@ -300,12 +254,11 @@ header {
 
 .twitch-container,
 .youtube-container {
-    /* Загальні стилі для кнопок першого ряду */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Новий спосіб для відступу між іконкою і текстом */
+    gap: 5px;
     width: 180px;
     height: 100px;
     padding: 20px;
@@ -317,18 +270,16 @@ header {
     color: inherit;
     font-family: 'Nunito-bold', sans-serif;
     margin-bottom: 10px;
-
 }
 
 .telegram-container,
 .discord-container,
 .modrinth-container {
-    /* Загальні стилі для кнопок другого ряду */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Відступ між іконкою і текстом */
+    gap: 10px;
     width: 420px;
     max-width: 90%;
     height: 30px;
@@ -343,7 +294,6 @@ header {
     margin-top: 12px;
 }
 
-/* Скидання стилів для тексту, щоб він не мав зайвих відступів */
 .telegram_text,
 .discord_text,
 .modrinth_text {
@@ -351,7 +301,6 @@ header {
     padding: 0;
 }
 
-/* Розміри для іконок, специфічні для кнопок першого та другого ряду */
 .twitch-container .button-icon,
 .youtube-container .button-icon {
     height: 50px;
@@ -366,11 +315,8 @@ header {
     height: 35px;
 }
 
-
-/* Тепер ви можете стилізувати кожен контейнер-посилання окремо, але без повторення загальних правил */
-
 .twitch-container {
-    background: #8932d6
+    background: #8932d6;
 }
 
 .twitch-container:hover {
@@ -414,8 +360,6 @@ header {
     transform: scale(1.03);
 }
 
-
-
 .button3-text {
     font-family: 'Nunito-bold';
     font-size: 32px;
@@ -432,39 +376,33 @@ header {
 }
 
 .buttons3-container {
-    display: flex; /* Змінено з flex-direction: column */
-    flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
-    justify-content: center; /* Центруємо кнопки по горизонталі */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 5px;
-    width: 420px;
-    max-width: 420px;;
+    /* Use a responsive width */
+    width: 90%;
+    max-width: 420px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    border-radius: 15px 15px 15px 15px;
-    -webkit-border-radius: 15px 15px 15px 15px;
-    -moz-border-radius: 15px 15px 15px 15px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-radius: 15px;
     filter: drop-shadow(0px 0px 30px #9800f0);
-    margin-top: 3%;
+    margin-top: 5%;
     background: #BC7EFA;
     background: linear-gradient(129deg, rgba(188, 126, 250, 1) 0%, rgba(118, 43, 189, 1) 50%, rgba(129, 39, 208, 1) 100%);
-
-
+    padding: 30px 20px; /* Combined padding for cleaner code */
 }
+
 .monobank-container,
 .donatello-container{
-    /* Загальні стилі для кнопок другого ряду */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Відступ між іконкою і текстом */
+    gap: 10px;
     width: auto;
     max-width: 90%;
     height: 25px;
@@ -478,13 +416,10 @@ header {
     font-family: 'Nunito-bold', sans-serif;
     padding-left: 25%;
     padding-right: 25%;
-
 }
-
 
 .monobank-container {
     background: #000000;
-
 }
 
 .monobank-container:hover {
@@ -502,74 +437,51 @@ header {
     transform: scale(1.03);
 }
 
-
 .container {
-    background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
+    background: linear-gradient(0deg, #5e00b580 0%, #5600935e 100%);
     border-radius: 15px;
-    padding-left: 7%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 7%;
+    padding: 5% 5% 7% 5%; /* Combined padding for cleaner code */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    display: flex; /* Changed from 'fixed' for better centering */
+    /* Flexbox on the body and this container handles centering */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Use max-width for responsiveness */
     max-width: 600px;
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    width: 90%; /* Use a percentage for better responsiveness */
+    /* Remove redundant margin and position properties */
     border-top: 1.5px solid #00000088;
     border-bottom: 3px #00000088;
     text-decoration: none;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
     z-index: 999;
-    flex-direction: column; /* Add this to stack the content inside the container */
+    /* This margin will push it down from the top and center horizontally */
+    margin: 60px auto 40px auto; 
 }
 
+/* No need for a separate media query for the container since the main rule is now responsive */
 @media (max-width: 1000px) {
-    .container {
-        background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
-        border-radius: 15px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-        display: flex; /* Changed from 'fixed' for better centering */
-        justify-content: center;
-        align-items: center;
-        max-width: 600px;
-        width: 100%;
-        margin-top: 60px;
-        margin-bottom: 40px;
-        border-top: 1.5px solid #00000088;
-        border-bottom: 3px #00000088;
-        text-decoration: none;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
-        z-index: 999;
-        flex-direction: column; /* Add this to stack the content inside the container */
-    }
     .buttons1-container {
         display: flex;
-        justify-content: center; /* Центруємо кнопки по горизонталі */
+        justify-content: center;
         align-items: center;
-        gap: 20px;
-        width: 100%; /* Додано, щоб контейнер займав усю ширину */
+        width: 100%;
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         border-top: 1px solid #ffffff9f;
         padding-top: 25px;
-
     }
     .buttons3-container {
-        display: flex; /* Змінено з flex-direction: column */
-        flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
-        justify-content: center; /* Центруємо кнопки по горизонталі */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         filter: drop-shadow(0px 0px 30px #9800f0);
-        margin-top: 3%;
+        margin-top: 5%;
         margin-right: 0;
         margin-left: 0;
         width: 90%;
