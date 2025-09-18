@@ -18,17 +18,14 @@ body {
     background: radial-gradient(125% 125% at 50% 10%, #0f030f 20%, #2d065a 100%);
     color: #ffffff;
     font-family: 'Nunito-bold', sans-serif;
-    /* Use min-height: 100vh for full viewport height */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Removes default body margin for perfect centering */
-    margin: 0; 
+    margin: 0;
 }
 
 .wrapper {
-    /* Use fixed for the background animation to fill the viewport */
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -43,17 +40,22 @@ body {
     position: absolute;
     box-shadow: 0 0vw 2vw 0vw #7700ffa9;
     background: linear-gradient(45deg, #6f00ff6b, #7700ff73);
-    animation: animate-spin 20s linear infinite;
+    /* Corrected animation rule */
+    animation: animate 20s linear infinite;
 }
 
-@keyframes animate-spin {
+/* Updated keyframes for the animation */
+@keyframes animate {
     0% {
-        transform: translate3d(0, 0, 1px) translate(0, 0) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg);
     }
     100% {
-        transform: translate3d(0, 0, 1px) translate(0, -120vh) rotate(360deg);
+        transform: translate(0, -120vh) rotate(360deg);
     }
 }
+/* Removed the redundant animate-spin keyframe to avoid confusion */
+
+
 .wrapper span:nth-child(1) {
     width: 60px;
     height: 60px;
@@ -128,11 +130,6 @@ body {
     animation-delay: 6s;
 }
 
-@keyframes animate {
-    100% {
-        transform: translate3d(0, 0, 1px) translate(0, -120vh);
-    }
-}
 
 header {
     position: fixed;
@@ -381,7 +378,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* Use a responsive width */
     width: 90%;
     max-width: 420px;
     user-select: none;
@@ -393,7 +389,7 @@ header {
     margin-top: 5%;
     background: #BC7EFA;
     background: linear-gradient(129deg, rgba(188, 126, 250, 1) 0%, rgba(118, 43, 189, 1) 50%, rgba(129, 39, 208, 1) 100%);
-    padding: 30px 20px; /* Combined padding for cleaner code */
+    padding: 30px 20px;
 }
 
 .monobank-container,
@@ -440,29 +436,44 @@ header {
 .container {
     background: linear-gradient(0deg, #5e00b580 0%, #5600935e 100%);
     border-radius: 15px;
-    padding: 5% 5% 7% 5%; /* Combined padding for cleaner code */
+    padding: 5% 5% 7% 5%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    /* Flexbox on the body and this container handles centering */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Use max-width for responsiveness */
     max-width: 600px;
-    width: 90%; /* Use a percentage for better responsiveness */
-    /* Remove redundant margin and position properties */
+    width: 90%;
     border-top: 1.5px solid #00000088;
     border-bottom: 3px #00000088;
     text-decoration: none;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     z-index: 999;
-    /* This margin will push it down from the top and center horizontally */
     margin: 60px auto 40px auto; 
 }
 
-/* No need for a separate media query for the container since the main rule is now responsive */
 @media (max-width: 1000px) {
+    .container {
+        background: linear-gradient(0deg, #5e00b580 0%, #5600935e 100%);
+        border-radius: 15px;
+        padding: 5% 5% 7% 5%;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        width: 90%;
+        border-top: 1.5px solid #00000088;
+        border-bottom: 3px #00000088;
+        text-decoration: none;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 999;
+        margin: 60px auto 40px auto; 
+    }
+
     .buttons1-container {
         display: flex;
         justify-content: center;
