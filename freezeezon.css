@@ -24,7 +24,7 @@
 }
 
 body {
-    background: radial-gradient(125% 125% at 50% 10%, #0f030f 40%, #1c0536 100%);
+    background: radial-gradient(125% 125% at 50% 10%, #0f030f 20%, #2d065a 100%);
     color: #fff;
     font-family: 'Nunito-bold', sans-serif;
     min-height: 100%;
@@ -171,71 +171,6 @@ body {
 }
 
 
-.container {
-    background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
-    border-radius: 15px;
-    padding-left: 7%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 7%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    display: flex; /* Changed from 'fixed' for better centering */
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    border-top: 1.5px solid #00000088;
-    border-bottom: 3px #00000088;
-    text-decoration: none;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
-    z-index: 999;
-    flex-direction: column; /* Add this to stack the content inside the container */
-}
-
-@media (max-width: 1000px) {
-    .container {
-        background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
-        border-radius: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-        display: flex; /* Changed from 'fixed' for better centering */
-        justify-content: center;
-        align-items: center;
-        max-width: 600px;
-        width: 100%;
-        margin-top: 60px;
-        margin-bottom: 40px;
-        border-top: 1.5px solid #00000088;
-        border-bottom: 3px #00000088;
-        text-decoration: none;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
-        z-index: 999;
-        flex-direction: column; /* Add this to stack the content inside the container */
-    }
-    .buttons1-container {
-        display: flex;
-        justify-content: center; /* Центруємо кнопки по горизонталі */
-        align-items: center;
-        gap: 20px;
-        width: 100%; /* Додано, щоб контейнер займав усю ширину */
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        border-top: 1px solid #ffffff9f;
-        padding-top: 25px;
-
-    }
-}
-
-
 
 
 header {
@@ -335,7 +270,7 @@ header {
     font-size: 42px;
     color: #ffffff;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     padding-top: 3px;
     text-shadow: 2px 2px 4px #000000;
     display: flex;
@@ -347,6 +282,7 @@ header {
 
 .description1,
 .description2 {
+    font-family: 'Nunito-normal';
     font-size: 20px;
     color: #ffffff;
     text-align: center;
@@ -492,6 +428,7 @@ header {
     margin-top: auto;
     margin-bottom: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .buttons3-container {
@@ -500,7 +437,8 @@ header {
     justify-content: center; /* Центруємо кнопки по горизонталі */
     align-items: center;
     gap: 5px;
-    width: 80%;
+    width: 420px;
+    max-width: 420px;;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -513,9 +451,7 @@ header {
     padding-left: 20px;
     padding-right: 20px;
     filter: drop-shadow(0px 0px 30px #9800f0);
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 3%;
     background: #BC7EFA;
     background: linear-gradient(129deg, rgba(188, 126, 250, 1) 0%, rgba(118, 43, 189, 1) 50%, rgba(129, 39, 208, 1) 100%);
 
@@ -540,8 +476,6 @@ header {
     text-decoration: none;
     color: inherit;
     font-family: 'Nunito-bold', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 25%;
     padding-right: 25%;
 
@@ -569,3 +503,75 @@ header {
 }
 
 
+.container {
+    background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
+    border-radius: 15px;
+    padding-left: 7%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex; /* Changed from 'fixed' for better centering */
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-top: 1.5px solid #00000088;
+    border-bottom: 3px #00000088;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
+    z-index: 999;
+    flex-direction: column; /* Add this to stack the content inside the container */
+}
+
+@media (max-width: 1000px) {
+    .container {
+        background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
+        border-radius: 15px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        display: flex; /* Changed from 'fixed' for better centering */
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        border-top: 1.5px solid #00000088;
+        border-bottom: 3px #00000088;
+        text-decoration: none;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
+        z-index: 999;
+        flex-direction: column; /* Add this to stack the content inside the container */
+    }
+    .buttons1-container {
+        display: flex;
+        justify-content: center; /* Центруємо кнопки по горизонталі */
+        align-items: center;
+        gap: 20px;
+        width: 100%; /* Додано, щоб контейнер займав усю ширину */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        border-top: 1px solid #ffffff9f;
+        padding-top: 25px;
+
+    }
+    .buttons3-container {
+        display: flex; /* Змінено з flex-direction: column */
+        flex-direction: column; /* Додано, щоб кнопки розташовувалися вертикально */
+        justify-content: center; /* Центруємо кнопки по горизонталі */
+        align-items: center;
+        filter: drop-shadow(0px 0px 30px #9800f0);
+        margin-top: 3%;
+        margin-right: 0;
+        margin-left: 0;
+        width: 90%;
+    }
+}
