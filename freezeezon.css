@@ -174,8 +174,10 @@ body {
 .container {
     background: linear-gradient(0deg, #4f105f3f 0%, #8401ff85 100%);
     border-radius: 15px;
-    padding-left: 5%;
+    padding-left: 7%;
     padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 7%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     display: flex; /* Changed from 'fixed' for better centering */
     justify-content: center;
@@ -216,6 +218,20 @@ body {
         margin: 60px auto 40px auto; /* Corrected centering: top/bottom margins, auto left/right */
         z-index: 999;
         flex-direction: column; /* Add this to stack the content inside the container */
+    }
+    .buttons1-container {
+        display: flex;
+        justify-content: center; /* Центруємо кнопки по горизонталі */
+        align-items: center;
+        gap: 20px;
+        width: 100%; /* Додано, щоб контейнер займав усю ширину */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        border-top: 1px solid #ffffff9f;
+        padding-top: 25px;
+
     }
 }
 
@@ -284,7 +300,6 @@ header {
     display: flex;
     justify-content: center; /* Центруємо кнопки по горизонталі */
     align-items: center;
-    flex-wrap: wrap; /* Додано, щоб кнопки переносилися на новий рядок при зменшенні екрана */
     gap: 20px;
     width: 100%; /* Додано, щоб контейнер займав усю ширину */
     margin: 0; /* Видалення зайвого відступу */
@@ -292,6 +307,8 @@ header {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    border-top: 1px solid #ffffff9f;
+    padding-top: 25px;
 
 }
 
@@ -328,23 +345,22 @@ header {
     margin-bottom: 0px;
 }
 
-.description {
-    font-family: 'Nunito-normal';
+.description1,
+.description2 {
     font-size: 20px;
     color: #ffffff;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
     text-shadow: 1px 1px 2px #000000;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ffffff9f;
-    margin-bottom: 25px;
-    align-items: center;
 }
 
+.description2 {
+    margin-top: -3px;
+    margin-bottom: 10px;
+}
 
 .twitch-container,
 .youtube-container {
