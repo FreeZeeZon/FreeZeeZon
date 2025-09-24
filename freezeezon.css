@@ -392,6 +392,24 @@ header {
     padding: 30px 20px;
 }
 
+/* Фіксація розміру іконок/картинок у .buttons3-container та заборона scale при hover */
+.buttons3-container img,
+.buttons3-container .button-icon {
+    display: block;
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain;
+    margin: 0 auto;
+    transition: none !important;
+}
+.buttons3-container img:hover,
+.buttons3-container .button-icon:hover {
+    transform: none !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+
 .monobank-container,
 .donatello-container{
     display: flex;
@@ -445,6 +463,7 @@ header {
     max-width: 600px;
     width: 90%;
     border-top: 1.5px solid #00000088;
+    border-left: 1.5px solid #00000088;
     border-bottom: 3px #00000088;
     text-decoration: none;
     backdrop-filter: blur(5px);
@@ -498,3 +517,5 @@ header {
         width: 90%;
     }
 }
+
+
